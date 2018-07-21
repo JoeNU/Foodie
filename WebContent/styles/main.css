@@ -5,7 +5,8 @@
 }
 
 body {
-  background:  #434343;
+  /*background:  #434343;*/
+  background:  #828080;
   /* color:       #FFFFFF; */
   color:       #cccccc;
   /* font-family: 'Open Sans', sans-serif; */
@@ -75,7 +76,8 @@ ul {
 }
 
 #welcome-msg {
-  border-right:  1px solid #FFFFFF;
+  /*border-right:  1px solid #FFFFFF;*/
+  border-right:  1px solid #050505
   display:       none;
   padding-right: 10px;
 }
@@ -110,7 +112,8 @@ ul {
 }
 
 .container > header span {
-  color: #FBAF41;
+  /*color: #FBAF41;*/
+  color: #a4fa40;
 }
 
 /**
