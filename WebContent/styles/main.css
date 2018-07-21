@@ -25,10 +25,12 @@ ul {
  */
 .top-header {
   align-items: center;
-  background:  #DF574B;
+  /* background:  #DF574B; */
+  background:  #d6d2f0;
   box-shadow:  0px 2px 10px #333333;
   display:     flex;
-  height:      60px;
+  /* height:      60px; */
+  height:      70px;
   position:    fixed;
   top:         0;
   width:       100%;
@@ -115,7 +117,8 @@ ul {
  * login form
  */
 #login-form {
-  color: #624630;
+  /* color: #624630; */
+  color: #0f0b07
   margin: 0px auto;
   overflow: auto;
   padding: 40px;
@@ -151,7 +154,8 @@ ul {
  * main section
  */
 .main-section {
-  background: #F3BB43;
+  /*background: #F3BB43;*/
+  background: #9be08f;
 }
 
 /**
