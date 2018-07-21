@@ -6,10 +6,13 @@
 
 body {
   background:  #434343;
-  color:       #FFFFFF;
+  /* color:       #FFFFFF; */
+  color:       #cccccc;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size:   0.9em;
+  /* font-weight: 300; */
+  font-weight: 400;
+  /* font-size:   0.9em; */
+  font-size:   1.1em;
 }
 
 ul {
