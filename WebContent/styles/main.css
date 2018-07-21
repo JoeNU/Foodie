@@ -205,7 +205,8 @@ ul {
  */
 #restaurant-list {
   background:  #F2EBD9;
-  color:       #624630;
+  /*color:       #624630;*/
+  color:       #9d79f2;
   display:     none;
   list-style:  none;
   margin-left: 180px;
@@ -291,7 +292,8 @@ ul {
  * footer section
  */
 footer {
-  background: #434343;
+  /*background: #434343; */
+  background: #b4f99f;
   font-size:  0.8em;
   height:     200px;
   position:   relative;
