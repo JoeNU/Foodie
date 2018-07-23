@@ -11,8 +11,10 @@ body {
   color:       #eeeee0;
   /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Lobster', cursive;
-  font-weight: 300; 
-  font-size:   0.9em; 
+  /* font-weight: 300; */ 
+  font-weight: 350;
+  /* font-size:   0.9em; */
+  font-size:   1.2em;
 }
 
 ul {
