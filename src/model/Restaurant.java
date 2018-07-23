@@ -38,16 +38,16 @@ public class Restaurant {
 		try {
 			if (object != null) {
 				this.businessId = object.getString("id");
-				// the value for "categories" is a JSON array of JSON arrays
+				// the value for "categories" is a JSON array of JSON objects
 				JSONArray jsonArray = (JSONArray) object.get("categories");
+				
 				List<String> list = new ArrayList<>();
 				// iterate over each JSON array in the outer JSON array
 				for (int i = 0; i < jsonArray.length(); i++) {
-					JSONArray subArray = jsonArray.getJSONArray(i);
-					// iterate over each field in a subarray
-					for (int j = 0; j < subArray.length(); j++) {
-						list.add(parseString(subArray.getString(j)));
-					}
+					JSONObject catObj = jsonArray.getJSONObject(i); // each category object has two fields: "alias", "title"
+					// get the value corresponding to "alias", which is a trimmed "title"
+					list.add(catObj.getString("alias"));
+					//System.out.println(catObj.getString("alias"));
 				}
 				// convert list of String to a single String where each element in this String is separated by a comma
 				this.categories = String.join(",", list);
@@ -56,11 +56,11 @@ public class Restaurant {
 				this.stars = object.getDouble("rating");
 				// the value for "location" is a JSON object
 				JSONObject location = (JSONObject) object.get("location"); // the return type for .get() is object, so you need to cast it to JSONObject, then you can assign it to location of JSONObject type.
-				JSONObject coordinate = (JSONObject) location.get("coordinate");
+				JSONObject coordinate = (JSONObject) object.get("coordinates");
 				this.latitude = coordinate.getDouble("latitude");
 				this.longitude = coordinate.getDouble("longitude");
 				this.city = location.getString("city");
-				this.state = location.getString("state_code");
+				this.state = location.getString("state");
 				this.fullAddress = jsonArrayToString((JSONArray) location.get("display_address"));
 				this.url = object.getString("url");
 			}

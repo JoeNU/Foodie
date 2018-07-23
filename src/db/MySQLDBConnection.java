@@ -107,6 +107,7 @@ public class MySQLDBConnection implements DBConnection {
 			
 			for (int i = 0; i < array.length(); i++) {
 				JSONObject object = array.getJSONObject(i);
+				//System.out.println(object);
 				// Step 1: create restaurant object: convert Yelp data to restaurant object. Note: this step also purifies data.
 				Restaurant restaurant = new Restaurant(object);
 				// Step 2: read data from restaurant object
