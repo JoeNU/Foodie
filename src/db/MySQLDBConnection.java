@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import yelp.YelpAPI;
+import yelp.YelpFusion;
 
 // This is detailed implementation of DBConnection interface 
 // for MySQL data base.
@@ -97,7 +98,7 @@ public class MySQLDBConnection implements DBConnection {
 
 		try {
 			// Fetch data from Yelp
-			YelpAPI api = new YelpAPI();
+			YelpFusion api = new YelpFusion();
 			JSONObject response = new JSONObject(api.searchForBusinessesByLocation(lat, lon));
 			JSONArray array = (JSONArray) response.get("businesses");
 			

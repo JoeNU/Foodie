@@ -1,6 +1,9 @@
 package yelp;
  
+import java.io.IOException;
+
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;
@@ -8,6 +11,8 @@ import org.scribe.model.Response;
 import org.scribe.model.Token;
 import org.scribe.model.Verb;
 import org.scribe.oauth.OAuthService;
+
+
  
 public class YelpAPI {
 	// parameters
@@ -90,5 +95,6 @@ public class YelpAPI {
 		//note: This API is deprecated, please upgrade to yelp.com/fusion"
 		queryAPI(yelpApi, 37.38, -122.08);
 		//System.out.println(yelpApi.searchForBusinessesByLocation(37.38, -122.08));
+
 	}
 }
