@@ -6,8 +6,8 @@ package db;
 
 public class DBUtil {
 	private static final String HOSTNAME = "localhost";
-	private static final String PORT_NUM = "3308"; // change it to your mysql port number if it's not 3306. My local MySQL uses port number 3308.
-	//private static final String PORT_NUM = "3306"; // on AWS, the default port number is 3306, so we need to set it be 3306 before exporting war file.
+	//private static final String PORT_NUM = "3308"; // change it to your mysql port number if it's not 3306. My local MySQL uses port number 3308.
+	private static final String PORT_NUM = "3306"; // on AWS, the default port number is 3306, so we need to set it be 3306 before exporting war file.
 	public static final String DB_NAME = "laiproject"; // 我们在MAMP自己create了laiproject database
 	private static final String USERNAME = "root";
 	private static final String PASSWORD = "root"; 

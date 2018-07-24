@@ -86,7 +86,7 @@ function onSessionValid(result) {
   var welcomeMsg = $('welcome-msg');
   var logoutBtn = $('logout-link');
   
-  welcomeMsg.innerHTML = 'Welcome, ' + user_fullname;
+  welcomeMsg.innerHTML = 'Hello, ' + user_fullname;
   
   // 显示出相应的元素于页面
   showElement(restaurantNav);
