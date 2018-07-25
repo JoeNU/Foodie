@@ -54,7 +54,7 @@ function validateSession() {
   var req = JSON.stringify({});
 	  
   // display loading message
-  showLoadingMessage('Validating session...');
+  showLoadingMessage('Validating your session...');
 
   // make AJAX call
   ajax('GET', url, req,
@@ -127,7 +127,7 @@ function initGeoLocation() {
 	//       当没法获取经纬度信息后，执行第二个callback function, 即onLoadPositionFailed;  
 	//       第三个参数设定缓存信息多少秒，因为跟卫星拿信息耗时间，缓存下来，下次run起来就快一些。  
     navigator.geolocation.getCurrentPosition(onPositionUpdated, onLoadPositionFailed, {maximumAge: 60000});
-	showLoadingMessage('Retrieving your location...');
+	showLoadingMessage('Fetching your location...');
   } else {
     onLoadPositionFailed();
   }
@@ -342,7 +342,7 @@ function loadNearbyRestaurants() {
   var req = JSON.stringify({}); // 因为这里用的是GET, 而不是POST，所以在http的body里用了一个空的JSON object. Note: JSON.stringify()将object变成string
   
   // display loading message
-  showLoadingMessage('Loading nearby restaurants...');
+  showLoadingMessage('Searching for restaurants nearby...');
   
   // make AJAX call
   ajax('GET', url + '?' + params, req, 
@@ -525,12 +525,12 @@ function addRestaurant(restaurantList, restaurant) {
   // stars
   var stars = $('div', {className: 'stars'});
   for (var i = 0; i < parseInt(restaurant.stars); i++) { // 根据star的个数，添加相应那么多个心形元素. Note: restaurant.stars默认情况下是浮点数，而非整数, 所以用parseInt()取整
-    var star = $('i', {className: 'fa fa-star'});
+    var star = $('i', {className: 'fas fa-star'});
     stars.appendChild(star);
   }
 
   if (('' + restaurant.stars).match(/\.5$/)) { // 若出现，比如，4.5的评分时，我们添加半颗心的图形。Note：这里用了regular expression
-    stars.appendChild($('i', {className: 'fa fa-star-half-o'}));
+    stars.appendChild($('i', {className: 'fas fa-star-half-alt'}));
   }
 
   section.appendChild(stars); 
@@ -553,7 +553,7 @@ function addRestaurant(restaurantList, restaurant) {
   
   favLink.appendChild($('i', {
     id: 'fav-icon-' + business_id,
-    className: restaurant.is_visited ? 'fa fa-heart' : 'fa fa-heart-o'
+    className: restaurant.is_visited ? 'fas fa-heart' : 'far fa-heart'
   }));
   
   li.appendChild(favLink);

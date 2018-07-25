@@ -8,23 +8,21 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"> 
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
   <header class="top-header">
     <nav class="top-nav">
+      <a href="#">About</a>
       <a href="#">Main</a>
-      <a href="#">Contact</a>
       <a href="#">More</a>
     </nav>
     <span id="welcome-msg"></span>
     <a id="logout-link" href="LogoutServlet">Sign out</a>
     <!--  <i id="avatar" class="avatar fa fa-user fa-2x"></i> -->
-    <i id="avatar" class="fas fa-sign-out-alt"></i>
-
-    
+    <i id="avatar" class="fas fa-sign-out-alt"></i>  
   </header>
   
   <div class="container">
@@ -37,9 +35,9 @@
 
     <section class="main-section">
       <div id="login-form">
-	    <label for="username">USERNAME</label>
+	    <label for="username">Username</label>
 	    <input id="username" name="username" type="text">
-	    <label for="password">PASSWORD</label>
+	    <label for="password">Password</label>
 	    <input id="password" name="password" type="password">
 	    <button id="login-btn">Sign in</button>
 	    <p id="login-error"></p>
@@ -49,15 +47,13 @@
         <div class="nav-icon">
           <!--   <i class="fa fa-cutlery fa-2x"></i> -->
 		  <i class="fas fa-compass"></i>
-
-
         </div>
         <nav class="main-nav">
           <a href="#" id="nearby-btn" class="main-nav-btn active">
             <i class="fas fa-map-marked-alt"></i> Neighborhood
           </a>
           <a href="#" id="recommend-btn" class="main-nav-btn">
-            <i class="far fa-smile-wink"></i> Recommend
+            <i class="far fa-smile-wink"></i> Yummy
           </a>
           <a href="#" id="fav-btn" class="main-nav-btn">
             <i class="fab fa-gratipay"></i> Favorite
@@ -73,14 +69,14 @@
             <a class="restaurant-name" href="#">Restaurant</a>
             <p class="restaurant-category">Vegetarian</p>
             <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
           </div>
           <p class="restaurant-address">666 Granada Ave<br/>Santa Clara<br/> CA</p>
           <div class="fav-link">
-            <i class="fa fa-heart"></i>
+            <i class="fas fa-heart"></i>
           </div>
         </li>
       </ul>
