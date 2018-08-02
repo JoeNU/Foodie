@@ -117,7 +117,6 @@ public class YelpFusion {
 	 */
 	public static void main(String[] args) {
 		YelpFusion yelpFusion = new YelpFusion();
-		//note: This API is deprecated, please upgrade to yelp.com/fusion"
 		queryAPI(yelpFusion, 37.38, -122.08);
 		//yelpFusion.sendRequestAndGetResponse();
 		//System.out.println(yelpFusion.searchForBusinessesByLocation(37.38, -122.08));
