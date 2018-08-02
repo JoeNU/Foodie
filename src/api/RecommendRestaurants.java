@@ -16,6 +16,8 @@ import db.DBConnection;
 import db.MongoDBConnection;
 import db.MySQLDBConnection;
 
+// recommend restaurants based on user's favorite restaurants' categories
+
 /**
  * Servlet implementation class RecommendRestaurants
  */

@@ -461,7 +461,7 @@ function changeFavoriteRestaurant(business_id) {
       var result = JSON.parse(res);
       if (result.status === 'OK') {
         li.dataset.visited = isVisited;
-        favIcon.className = isVisited ? 'fa fa-heart' : 'fa fa-heart-o'; // note: 'fa fa-heart'是实心心形；'fa fa-heart-o'是空心心形
+        favIcon.className = isVisited ? 'fas fa-heart' : 'far fa-heart'; // note: 'fa fa-heart'是实心心形；'fa fa-heart-o'是空心心形
       }
     }
   );

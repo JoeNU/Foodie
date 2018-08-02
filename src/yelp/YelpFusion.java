@@ -17,8 +17,10 @@ import java.net.URISyntaxException;
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
@@ -47,29 +49,23 @@ public class YelpFusion {
 	 */
 	private String sendRequestAndGetResponse(HttpGet request) {
 		System.out.println("Querying " + request + " ...");
+		CloseableHttpClient httpclient = null;
+		CloseableHttpResponse response = null;
 		try {
-            HttpClient httpclient = HttpClientBuilder.create().build();  // the http-client, that will send the request
-            HttpResponse response = httpclient.execute(request); // the client executes the request and gets a response
+			httpclient = HttpClientBuilder.create().build();  // the http-client, that will send the request
+			response = httpclient.execute(request); // the client executes the request and gets a response
             int responseCode = response.getStatusLine().getStatusCode();  // check the response code
-            switch (responseCode) {
-                case 200: { 
-                    // everything is ok, and return the response
-                    String res = EntityUtils.toString(response.getEntity());  // now you have the response as String, which you can convert to a JSONObject or do other stuff
-                    return res;
-                }
-                case 500: {
-                    // server problems 
-                    break;
-                }
-                case 403: {
-                    // no authorization to access that resource
-                    break;
-                }
+            if (responseCode == 200) {
+            	// everything is ok, and return the response
+            	String res = EntityUtils.toString(response.getEntity());  // now you have the response as String, which you can convert to a JSONObject or do other stuff
+            	httpclient.close(); // Don't forget to close connection!!!
+            	response.close();
+            	return res;
             }
         } catch (IOException e) {
             // handle exception
         	System.out.println("Exception!");
-        }
+        } 
 		return null;
 	}
 	

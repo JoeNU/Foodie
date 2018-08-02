@@ -19,6 +19,8 @@ import db.MySQLDBConnection;
 
 import java.io.PrintWriter;
 
+// Search for restaurants near a user's geolocation
+
 /**
  * Servlet implementation class SearchRestaurants
  */
